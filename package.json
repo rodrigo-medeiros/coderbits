@@ -11,5 +11,8 @@
     "wrapper"
   ],
   "author": "Rodrigo Medeiros <rodrigo.mangue@gmail.com> (https://coderbits.com/rodrigomangue)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.53.0"
+  }
 }
