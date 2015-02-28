@@ -1,0 +1,15 @@
+{
+  "name": "coderbits",
+  "version": "0.1.0",
+  "description": "A wrapper for the coderbits API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/"
+  },
+  "keywords": [
+    "coderbits",
+    "wrapper"
+  ],
+  "author": "Rodrigo Medeiros <rodrigo.mangue@gmail.com> (https://coderbits.com/rodrigomangue)",
+  "license": "MIT"
+}
