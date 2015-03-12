@@ -135,4 +135,67 @@ describe("When searching for a non-existent user", function () {
 
   });
 
+  describe("passing an object with the username string and 'true' to the json option", function () {
+
+    it("should return an empty parsed object", function (done) {
+
+      var user = {
+        user: 'non-existent',
+        json: true
+      };
+
+      coderbits(user, function (error, profile) {
+        expect(error).to.be(null);
+        expect(typeof profile).to.be('object');
+        expect(profile).to.eql({});
+        expect(typeof JSON.stringify(profile)).to.be('string');
+        done();
+      });
+
+    });
+
+  });
+
+  describe("passing an object with the account string and the respective account username string", function () {
+
+    it("should return an empty stringified object", function (done) {
+
+      var user = {
+        user: 'non-existent',
+        account: 'github'
+      };
+
+      coderbits(user, function (error, profile) {
+        expect(error).to.be(null);
+        expect(typeof profile).to.be('string');
+        expect(profile).to.be('{}');
+        done();
+      });
+
+    });
+
+  });
+
+  describe("passing an object with the account string, the respective account username string and 'true' to the json option", function () {
+
+    it("should return the parsed user profile", function (done) {
+
+      var user = {
+        user: 'non-existent',
+        account: 'github',
+        json: true
+      };
+
+      coderbits(user, function (error, profile) {
+        expect(error).to.be(null);
+        expect(typeof profile).to.be('object');
+        expect(profile).to.eql({});
+        expect(typeof JSON.stringify(profile)).to.be('string');
+        done();
+      });
+
+    });
+
+  });
+
 });
