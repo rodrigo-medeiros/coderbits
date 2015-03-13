@@ -19,7 +19,7 @@ var coderbits = function (user, callback) {
 
   request(url, function (error, response, body) {
     if (!error && response.statusCode) {
-      if (user.json) {
+      if (user.json && typeof user.json === 'boolean') {
         body = JSON.parse(body);
       }
       return callback(null, body);

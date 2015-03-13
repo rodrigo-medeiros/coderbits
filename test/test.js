@@ -56,6 +56,25 @@ describe("When searching for an existent user", function () {
 
   });
 
+  describe("passing an object with the username string and not a boolean value to the json option", function () {
+
+    it("should return the the stringified user profile", function (done) {
+
+      var user = {
+        user: 'bit',
+        json: 'true'
+      };
+
+      coderbits(user, function (error, profile) {
+        expect(error).to.be(null);
+        expect(typeof profile).to.be('string');
+        done();
+      });
+
+    });
+
+  });
+
   describe("passing an object with the account string and the respective account username string", function () {
 
     it("should return the stringified user profile", function (done) {
