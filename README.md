@@ -25,7 +25,7 @@ Searches using handles from linked accounts can be done passing the info in a ob
 var user = {
   user: 'bitmunkey',
   account: 'github'
-}
+};
 
 coderbits(user, function (error, profile) {
   if (!error) console.log(profile);
@@ -43,4 +43,4 @@ var user = {
 
 ## License
 
-Licensed under the [MIT License](https://github.com/rodrigo-medeiros/coderbits/LICENSE)
+Licensed under the [MIT License](https://github.com/rodrigo-medeiros/coderbits/blob/master/LICENSE)
