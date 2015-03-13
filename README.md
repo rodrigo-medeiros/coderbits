@@ -1,6 +1,6 @@
 # coderbits
-> A wrapper for the coderbits API.
 [![Build Status](https://travis-ci.org/rodrigo-medeiros/coderbits.svg?branch=master)](https://travis-ci.org/rodrigo-medeiros/coderbits)
+> A wrapper for the coderbits API.
 
 The simplest way to programmatically get [coderbits](https://coderbits.com) profiles in node.js.
 
