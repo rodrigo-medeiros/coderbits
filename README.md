@@ -1,7 +1,7 @@
 # coderbits
 > A wrapper for the coderbits API.
 
-The simplest way to programmatically get [coderbits](coderbits.com) profiles in node.js.
+The simplest way to programmatically get [coderbits](https://coderbits.com) profiles in node.js.
 
 ## Install
 
