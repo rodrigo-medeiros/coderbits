@@ -15,7 +15,7 @@ var coderbits = function (user, callback) {
         url += '?account=' + user.account;
       }
     }
-  }
+  } else throw new Error(typeof user + " is not a valid user string neither an options object.");
 
   request(url, function (error, response, body) {
     if (!error && response.statusCode) {
