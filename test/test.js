@@ -178,7 +178,7 @@ describe("When searching for a non-existent user", function () {
 
   describe("passing an object with the account string, the respective account username string and 'true' to the json option", function () {
 
-    it("should return the parsed user profile", function (done) {
+    it("should return an empty parsed object", function (done) {
 
       var user = {
         user: 'non-existent',
@@ -192,6 +192,104 @@ describe("When searching for a non-existent user", function () {
         expect(profile).to.eql({});
         expect(typeof JSON.stringify(profile)).to.be('string');
         done();
+      });
+
+    });
+
+  });
+
+});
+
+describe("When testing the arguments passed", function () {
+
+  describe("and there are none", function () {
+
+    it("should throw an error", function (done) {
+
+      expect(coderbits).withArgs().to.throwException(function (err) {
+        expect(err).to.be.a(Error);
+        expect(err.message).to.be("An user string (or an options object) and a callback are required.");
+        done();
+      });
+
+    });
+
+  });
+
+  describe("and there is just the username string", function () {
+
+    it("should throw an error", function (done) {
+
+      expect(coderbits).withArgs('bit').to.throwException(function (err) {
+        expect(err).to.be.a(Error);
+        expect(err.message).to.be("An user string (or an options object) and a callback are required.");
+        done();
+      });
+
+    });
+
+  });
+
+  describe("and there is just the options object", function () {
+
+    it("should throw an error", function (done) {
+
+      var user = {
+        user: 'bit'
+      };
+
+      expect(coderbits).withArgs(user).to.throwException(function (err) {
+        expect(err).to.be.a(Error);
+        expect(err.message).to.be("An user string (or an options object) and a callback are required.");
+        done();
+      });
+
+    });
+
+  });
+
+  describe("and there is just the callback", function () {
+
+    it("should throw an error", function (done) {
+
+      var callback = function (error, profile) {};
+
+      expect(coderbits).withArgs(callback).to.throwException(function (err) {
+        expect(err).to.be.a(Error);
+        expect(err.message).to.be("An user string (or an options object) and a callback are required.");
+        done();
+      });
+
+    });
+
+  });
+
+  describe("and the second one is not a callback function", function () {
+
+    it("should throw an error", function (done) {
+
+      expect(coderbits).withArgs('bit', 'not-a-callback').to.throwException(function (err) {
+        expect(err).to.be.a(Error);
+        expect(err.message).to.be("string is not a valid callback.");
+        done();
+
+      });
+
+    });
+
+  });
+
+  describe("and the first one is not a string neither an object", function () {
+
+    it("should throw an error", function (done) {
+
+      var callback = function (error, profile) {};
+
+      expect(coderbits).withArgs(undefined, callback).to.throwException(function (err) {
+        expect(err).to.be.a(Error);
+        expect(err.message).to.be("undefined is not a valid user string neither an options object.");
+        done();
+
       });
 
     });
