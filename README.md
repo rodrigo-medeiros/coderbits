@@ -1,5 +1,6 @@
 # coderbits
 > A wrapper for the coderbits API.
+[![Build Status](https://travis-ci.org/rodrigo-medeiros/coderbits.svg?branch=master)](https://travis-ci.org/rodrigo-medeiros/coderbits)
 
 The simplest way to programmatically get [coderbits](https://coderbits.com) profiles in node.js.
 
@@ -32,7 +33,7 @@ coderbits(user, function (error, profile) {
 });
 ```
 
-If you want the profile already parsed, just pass `json: true` to your search object:
+If you want the profile already parsed, just add the `json` option to your search object:
 
 ```javascript
 var user = {
