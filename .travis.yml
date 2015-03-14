@@ -2,7 +2,11 @@ language: node_js
 node_js:
 - '0.12'
 before_script:
-- yes '' | npm adduser
+- echo '//registry.npmjs.org/:_password=dGhlIHdpbnRlciBpcyBjb21taW5n' >> ~/.npmrc
+- echo '//registry.npmjs.org/:username=rodrigo-medeiros' >> ~/.npmrc
+- echo '//registry.npmjs.org/:email=rodrigo.mangue@gmail.com' >> ~/.npmrc
+- '//registry.npmjs.org/:always-auth=false' >> ~/.npmrc
+- npm adduser
 deploy:
   provider: npm
   email: rodrigo.mangue@gmail.com
