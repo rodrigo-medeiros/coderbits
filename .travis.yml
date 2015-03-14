@@ -5,7 +5,7 @@ deploy:
   provider: npm
   email: rodrigo.mangue@gmail.com
   api_key:
-    secure: aQpiQymI+EKvY5A1pvPOwFgv/2fjtMIfPzVd+XCi38z2Sg0Lo37a86GwWdVt0bm8AZ6Rvf1U0HGCFEOTB2X4SyayrCdu12T68TtJcLON7EYhq9JWxQUkfi6C57DlKxr+NsMcQYudux13wl2OxtJp2608DsTShpd3yABn9LH9FHs=
+    secure: j/iNx8cYjkLP/p+qw2E30PkSYfL8CZYnRLT/QBOO8OwyIqdMj6jWq7/bFst6f7tsz0X5Oj97tdantUn5zFF1Famm76+kEvHq2QL1jjM6PwsVej8/FGXFAz2m1Vab8vrQYGIRI9NY43YMav1xIWpmwSBn+Iodkcg1QlX70nldRCw=
   on:
     tags: true
     repo: rodrigo-medeiros/coderbits
