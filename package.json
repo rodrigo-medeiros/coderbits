@@ -1,6 +1,6 @@
 {
   "name": "coderbits",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A wrapper for the coderbits API",
   "author": "Rodrigo Medeiros <rodrigo.mangue@gmail.com> (https://coderbits.com/rodrigomangue)",
   "repository": "rodrigo-medeiros/coderbits",
