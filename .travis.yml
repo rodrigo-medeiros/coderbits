@@ -2,13 +2,12 @@ language: node_js
 node_js:
 - '0.12'
 before_script:
-- echo '//registry.npmjs.org/:_password=dGhlIHdpbnRlciBpcyBjb21taW5n' >> ~/.npmrc ; echo '//registry.npmjs.org/:username=rodrigo-medeiros' >> ~/.npmrc ; echo '//registry.npmjs.org/:email=rodrigo.mangue@gmail.com' >> ~/.npmrc ; echo '//registry.npmjs.org/:always-auth=false' >> ~/.npmrc
-- yes '' | npm adduser
+- npm link
 deploy:
   provider: npm
   email: rodrigo.mangue@gmail.com
   api_key:
-    secure: j/iNx8cYjkLP/p+qw2E30PkSYfL8CZYnRLT/QBOO8OwyIqdMj6jWq7/bFst6f7tsz0X5Oj97tdantUn5zFF1Famm76+kEvHq2QL1jjM6PwsVej8/FGXFAz2m1Vab8vrQYGIRI9NY43YMav1xIWpmwSBn+Iodkcg1QlX70nldRCw=
+    secure: Se7wZsJO9p9/tzr9cQsxskicjgS/8b4a625oM4BA/+rcf3SV8zOoLPeGqYx4L/cItqzK783NoRsu2icmFHzYll3VEWxEIERGoPGyB8LB80mLhX4eKhUZ5xGD2Y2LrJxkHUpAhU+npbjxcfTFsLzrp/hpckhzHyNPJzuwGxVj6zQ=
   on:
     tags: true
     repo: rodrigo-medeiros/coderbits
