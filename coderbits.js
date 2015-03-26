@@ -1,4 +1,4 @@
-var request = require('request');
+var https = require('https');
 
 var coderbits = function (user, callback) {
 
@@ -17,14 +17,21 @@ var coderbits = function (user, callback) {
     }
   } else throw new Error(typeof user + " is not a valid user string neither an options object.");
 
-  request(url, function (error, response, body) {
-    if (!error && response.statusCode) {
+  https.get(url, function (response) {
+    var body = '';
+
+    response.on('data', function (data) {
+      body += data;
+    });
+    response.on('end', function () {
       if (user.json && typeof user.json === 'boolean') {
         body = JSON.parse(body);
       }
       return callback(null, body);
-    }
-    return callback(error);
+    });
+    response.on('error', function (error) {
+      return callback(error);
+    });
   });
 
 };
