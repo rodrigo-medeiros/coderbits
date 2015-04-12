@@ -24,7 +24,7 @@ Searches using handles from linked accounts can be done passing the info in a ob
 
 ```javascript
 var user = {
-  user: 'bitmunkey',
+  username: 'bitmunkey',
   account: 'github'
 };
 
@@ -37,7 +37,7 @@ If you want the profile already parsed, just add the `json` option to your searc
 
 ```javascript
 var user = {
-  user: 'bit',
+  username: 'bit',
   json: true
 };
 ```

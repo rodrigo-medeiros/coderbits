@@ -23,7 +23,7 @@ describe("When searching for an existent user", function () {
     it("should return the stringified user profile", function (done) {
 
       var user = {
-        user: 'bit'
+        username: 'bit'
       };
 
       coderbits(user, function (error, profile) {
@@ -41,7 +41,7 @@ describe("When searching for an existent user", function () {
     it("should return the parsed user profile", function (done) {
 
       var user = {
-        user: 'bit',
+        username: 'bit',
         json: true
       };
 
@@ -61,7 +61,7 @@ describe("When searching for an existent user", function () {
     it("should return the the stringified user profile", function (done) {
 
       var user = {
-        user: 'bit',
+        username: 'bit',
         json: 'true'
       };
 
@@ -80,7 +80,7 @@ describe("When searching for an existent user", function () {
     it("should return the stringified user profile", function (done) {
 
       var user = {
-        user: 'bitmunkey',
+        username: 'bitmunkey',
         account: 'github'
       };
 
@@ -99,7 +99,7 @@ describe("When searching for an existent user", function () {
     it("should return the parsed user profile", function (done) {
 
       var user = {
-        user: 'bitmunkey',
+        username: 'bitmunkey',
         account: 'github',
         json: true
       };
@@ -140,7 +140,7 @@ describe("When searching for a non-existent user", function () {
     it("should return an empty stringified object", function (done) {
 
       var user = {
-        user: 'non-existent'
+        username: 'non-existent'
       };
 
       coderbits(user, function (error, profile) {
@@ -159,7 +159,7 @@ describe("When searching for a non-existent user", function () {
     it("should return an empty parsed object", function (done) {
 
       var user = {
-        user: 'non-existent',
+        username: 'non-existent',
         json: true
       };
 
@@ -180,7 +180,7 @@ describe("When searching for a non-existent user", function () {
     it("should return an empty stringified object", function (done) {
 
       var user = {
-        user: 'non-existent',
+        username: 'non-existent',
         account: 'github'
       };
 
@@ -200,7 +200,7 @@ describe("When searching for a non-existent user", function () {
     it("should return an empty parsed object", function (done) {
 
       var user = {
-        user: 'non-existent',
+        username: 'non-existent',
         account: 'github',
         json: true
       };
@@ -254,7 +254,7 @@ describe("When testing the arguments passed", function () {
     it("should throw an error", function (done) {
 
       var user = {
-        user: 'bit'
+        username: 'bit'
       };
 
       expect(coderbits).withArgs(user).to.throwException(function (err) {

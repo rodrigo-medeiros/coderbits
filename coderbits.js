@@ -9,8 +9,8 @@ var coderbits = function (user, callback) {
   if (typeof user === 'string') {
     url += user + '.json';
   } else if (typeof user === 'object') {
-    if (user.user && typeof user.user === 'string') {
-      url += user.user + '.json';
+    if (user.username && typeof user.username === 'string') {
+      url += user.username + '.json';
       if (user.account && typeof user.account === 'string') {
         url += '?account=' + user.account;
       }
