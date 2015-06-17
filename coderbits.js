@@ -1,8 +1,9 @@
-var https = require('https');
+var https = require('https'),
+    config = require('./config.json');
 
 var coderbits = function (user, callback) {
 
-  var url = 'https://coderbits.com/';
+  var url = config.url;
 
   if (arguments.length < 2) throw new Error("An user string (or an options object) and a callback are required.");
   if (typeof callback !== 'function') throw new Error(typeof callback + " is not a valid callback.");
