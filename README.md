@@ -44,4 +44,5 @@ var user = {
 
 ## License
 
-Licensed under the [MIT License](https://github.com/rodrigo-medeiros/coderbits/blob/master/LICENSE)
+Licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
